@@ -1,6 +1,5 @@
 package zone.possum.emigration.farmersdelight;
 
-import dev.emi.emi.api.EmiPlugin;
 import dev.emi.emi.api.EmiRegistry;
 import dev.emi.emi.api.recipe.EmiRecipeCategory;
 import dev.emi.emi.api.recipe.VanillaEmiRecipeCategories;
@@ -10,6 +9,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.util.registry.RegistryEntryList;
+import zone.possum.emigration.core.SimpleEMIngrationPlugin;
 import zone.possum.emigration.farmersdelight.recipe.EmiCookingPotRecipe;
 import zone.possum.emigration.farmersdelight.recipe.EmiCuttingBoardRecipe;
 import zone.possum.emigration.farmersdelight.recipe.EmiDecompositionRecipe;
@@ -22,7 +22,7 @@ import com.nhoryzon.mc.farmersdelight.registry.ItemsRegistry;
 import com.nhoryzon.mc.farmersdelight.registry.RecipeTypesRegistry;
 import com.nhoryzon.mc.farmersdelight.registry.TagsRegistry;
 
-public class FarmersDelightPlugin implements EmiPlugin {
+public class FarmersDelightPlugin implements SimpleEMIngrationPlugin {
 	private static final RecipeType<CookingPotRecipe> COOKING_T = RecipeTypesRegistry.COOKING_RECIPE_SERIALIZER.type();
 	public static final EmiRecipeCategory COOKING = new EmiRecipeCategory(
 		Registry.RECIPE_TYPE.getId(COOKING_T),
@@ -70,5 +70,10 @@ public class FarmersDelightPlugin implements EmiPlugin {
 				.map(RegistryEntry::value)
 				.toList()
 		));
+	}
+
+	@Override
+	public String getMod() {
+		return "farmersdelight";
 	}
 }

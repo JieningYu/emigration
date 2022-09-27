@@ -6,15 +6,18 @@ import org.slf4j.LoggerFactory;
 import dev.emi.emi.api.EmiPlugin;
 import dev.emi.emi.api.EmiRegistry;
 import net.fabricmc.loader.api.FabricLoader;
+import zone.possum.emigration.core.SimpleEMIngrationPlugin;
 import zone.possum.emigration.farmersdelight.FarmersDelightPlugin;
 
 public class EmigrationPlugin implements EmiPlugin {
     public static final Logger LOGGER = LoggerFactory.getLogger("emigration");
 
+    private static void register(SimpleEMIngrationPlugin plugin, EmiRegistry emiRegistry) {
+        if (FabricLoader.getInstance().isModLoaded(plugin.getMod())) plugin.register(emiRegistry);
+    }
+
     @Override
     public void register(EmiRegistry emi) {
-        FabricLoader loader = FabricLoader.getInstance();
-        if (loader.isModLoaded("farmersdelight"))
-            new FarmersDelightPlugin().register(emi);
+        register(new FarmersDelightPlugin(), emi);
     }
 }
