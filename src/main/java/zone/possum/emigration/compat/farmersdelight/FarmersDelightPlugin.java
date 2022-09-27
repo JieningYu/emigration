@@ -1,4 +1,4 @@
-package zone.possum.emigration.farmersdelight;
+package zone.possum.emigration.compat.farmersdelight;
 
 import dev.emi.emi.api.EmiRegistry;
 import dev.emi.emi.api.recipe.EmiRecipeCategory;
@@ -9,10 +9,10 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.util.registry.RegistryEntryList;
+import zone.possum.emigration.compat.farmersdelight.recipe.EmiCookingPotRecipe;
+import zone.possum.emigration.compat.farmersdelight.recipe.EmiCuttingBoardRecipe;
+import zone.possum.emigration.compat.farmersdelight.recipe.EmiDecompositionRecipe;
 import zone.possum.emigration.core.SimpleEMIngrationPlugin;
-import zone.possum.emigration.farmersdelight.recipe.EmiCookingPotRecipe;
-import zone.possum.emigration.farmersdelight.recipe.EmiCuttingBoardRecipe;
-import zone.possum.emigration.farmersdelight.recipe.EmiDecompositionRecipe;
 
 import com.nhoryzon.mc.farmersdelight.FarmersDelightMod;
 import com.nhoryzon.mc.farmersdelight.recipe.CookingPotRecipe;

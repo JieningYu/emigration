@@ -1,4 +1,4 @@
-package zone.possum.emigration.farmersdelight.recipe;
+package zone.possum.emigration.compat.farmersdelight.recipe;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ import net.minecraft.client.gui.tooltip.TooltipComponent;
 import net.minecraft.item.Item;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.util.Identifier;
-import zone.possum.emigration.farmersdelight.FarmersDelightPlugin;
+import zone.possum.emigration.compat.farmersdelight.FarmersDelightPlugin;
 
 public class EmiCookingPotRecipe implements EmiRecipe {
     private static final Identifier GUI_TEXTURE = new Identifier(FarmersDelightMod.MOD_ID, "textures/gui/cooking_pot.png");

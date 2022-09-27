@@ -1,4 +1,4 @@
-package zone.possum.emigration.farmersdelight.recipe;
+package zone.possum.emigration.compat.farmersdelight.recipe;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ import dev.emi.emi.api.stack.EmiIngredient;
 import dev.emi.emi.api.stack.EmiStack;
 import dev.emi.emi.api.widget.WidgetHolder;
 import net.minecraft.util.Identifier;
-import zone.possum.emigration.farmersdelight.FarmersDelightPlugin;
+import zone.possum.emigration.compat.farmersdelight.FarmersDelightPlugin;
 
 public class EmiCuttingBoardRecipe implements EmiRecipe {
     private static final Identifier GUI_TEXTURE = new Identifier(FarmersDelightMod.MOD_ID, "textures/gui/rei/cutting_board.png");
